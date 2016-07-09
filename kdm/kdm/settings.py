@@ -25,8 +25,9 @@ SECRET_KEY = 'e4!59baq-$-(+c!jga+zg6sm&1-*6p7i-rd@hwx6aqz6$ftmt1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kennedeinmaimai.de']
 
+USE_X_FORWARDED_HOST = True
 
 # Application definition
 
@@ -106,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-de'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
