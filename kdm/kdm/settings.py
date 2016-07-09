@@ -25,7 +25,7 @@ SECRET_KEY = 'e4!59baq-$-(+c!jga+zg6sm&1-*6p7i-rd@hwx6aqz6$ftmt1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kennedeinmaimai.de']
+ALLOWED_HOSTS = ['www.kennedeinmaimai.de']
 
 USE_X_FORWARDED_HOST = True
 
