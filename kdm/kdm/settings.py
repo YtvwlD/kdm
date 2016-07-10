@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'memedb',
     'bootstrap3',
+    'jquery',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -122,3 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# bootstrap3 configuration
+# https://django-bootstrap3.readthedocs.io/en/latest/settings.html
+BOOTSTRAP3 = {
+    'jquery_url': STATIC_URL + 'js/jquery.js',
+}
