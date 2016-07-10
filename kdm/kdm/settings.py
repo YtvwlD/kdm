@@ -133,4 +133,5 @@ STATICFILES_DIRS = [
 BOOTSTRAP3 = {
     'jquery_url': STATIC_URL + 'js/jquery.js',
     'base_url': STATIC_URL,
+    'theme_url': STATIC_URL + 'css/bootstrap-theme.min.css',
 }
