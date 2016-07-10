@@ -124,8 +124,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 # bootstrap3 configuration
 # https://django-bootstrap3.readthedocs.io/en/latest/settings.html
 BOOTSTRAP3 = {
     'jquery_url': STATIC_URL + 'js/jquery.js',
+    'base_url': STATIC_URL,
 }
