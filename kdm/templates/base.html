@@ -1,8 +1,34 @@
 {% extends 'bootstrap3/bootstrap3.html' %}
 
+{% load static %}
+
+{% block bootstrap3_extra_head %}
+	<link href="{% static 'css/kdm.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block bootstrap3_title %}{% block site_title %}{% endblock %} - KenneDeinMaimai.de{% endblock %}
 
 {%block bootstrap3_content %}
-	{% block site_content %}
-	{% endblock %}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Navigation umschalten</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">KenneDeinMaimai.de</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					{# TODO #}
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container kdm-template" role="main">
+		{% block site_content %}
+		{% endblock %}
+	</div>
 {% endblock %}
