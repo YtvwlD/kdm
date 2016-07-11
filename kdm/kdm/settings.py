@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e4!59baq-$-(+c!jga+zg6sm&1-*6p7i-rd@hwx6aqz6$ftmt1'
+SECRET_KEY = os.environ.get("SECRET_KEY", default='e4!59baq-$-(+c!jga+zg6sm&1-*6p7i-rd@hwx6aqz6$ftmt1')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = not bool(os.environ.get("PRODUCTION"))
 
 ALLOWED_HOSTS = ['www.kennedeinmaimai.de']
 
@@ -127,6 +127,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+STATIC_ROOT = "/var/www/virtual/ytvwld/www.kennedeinmaimai.de/static/"
 
 # bootstrap3 configuration
 # https://django-bootstrap3.readthedocs.io/en/latest/settings.html
