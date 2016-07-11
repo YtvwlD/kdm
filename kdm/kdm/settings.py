@@ -138,3 +138,7 @@ BOOTSTRAP3 = {
     'base_url': STATIC_URL,
     'theme_url': STATIC_URL + 'css/bootstrap-theme.min.css',
 }
+
+# folder for memes
+
+MEME_DIR = os.path.join(BASE_DIR, os.path.join("..", "memes"))

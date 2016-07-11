@@ -90,3 +90,6 @@ ENV/
 
 # DB
 kdm/db.sqlite3
+
+# memes
+memes/

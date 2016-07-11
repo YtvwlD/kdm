@@ -22,7 +22,8 @@ from memedb import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='home')
+    url(r'^$', views.home, name='home'),
+    url(r'^maimai/(?P<meme>[a-zA-Z0-9-]+)$', views.show_meme, name="detail"),
 ]
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()
